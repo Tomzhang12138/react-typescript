@@ -6,7 +6,12 @@
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
-        "lib": ["es6", "DOM"]
+        "lib": ["es6", "DOM"],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "allowJs": true
     },
     "include": [
         "./src/**/*"
