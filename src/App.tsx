@@ -8,6 +8,8 @@ import {
 import AppRoute from './route'
 import { NotFound } from './404'
 
+import '@/style/index.less'
+
 export interface AppProps { }
 
 export class App extends React.Component<AppProps, {}> {

@@ -59,7 +59,8 @@ module.exports = {
     entry: ["./src/index.tsx"],
     output: {
         filename:   "assets/js/[name].[hash].js",
-        path:       path.join(__dirname, "../dist")
+        path:       path.join(__dirname, "../dist"),
+        publicPath: "/"
     },
     module: {
         rules: [
