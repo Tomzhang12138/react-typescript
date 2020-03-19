@@ -16,20 +16,22 @@ export class App extends React.Component<AppProps, {}> {
     render() {
         return(
             <div>
-                <Switch>
-                    {AppRoute.map((route, index) => {
-                        return (
-                            <Route
-                                key={index}
-                                path={route.path}
-                                exact={route.exact}
-                                component={route.component}
-                            />
-                        );
-                    })}
-                    <Route path="/404" exact component={NotFound} />
-                    <Redirect to="/404" />
-                </Switch>
+                <React.Suspense fallback={<h1>loading...</h1>}>
+                    <Switch>
+                        {AppRoute.map((route, index) => {
+                            return (
+                                <Route
+                                    key={index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.component}
+                                />
+                            );
+                        })}
+                        <Route path="/404" exact component={NotFound} />
+                        <Redirect to="/404" />
+                    </Switch>
+                </React.Suspense>
             </div>
         )
     }

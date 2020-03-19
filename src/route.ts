@@ -1,23 +1,21 @@
-import Home from './pages/home'
-import About from './pages/about'
-import List from './pages/list'
+import * as React from 'react'
 
 const AppRoute = [
     {
         path:      "/",
-        component: Home,
+        component: React.lazy(() => import('./pages/home')),
         exact:     true,
         title:     "Home"
     },
     {
         path:      "/about",
-        component: About,
+        component: React.lazy(() => import('./pages/about')),
         exact:     true,
         title:     "About"
     },
     {
         path:      "/list",
-        component: List,
+        component: React.lazy(() => import('./pages/list')),
         exact:     true,
         title:     "List"
     }
