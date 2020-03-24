@@ -45,6 +45,11 @@ module.exports = merge(baseConfig, {
     })
   ],
   optimization: {
-    minimize: true
+    minimize: true,
+    splitChunks: {
+      chunks:    'all',
+      minChunks: 2,
+      name:      false
+    }
   }
 })
