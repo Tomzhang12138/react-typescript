@@ -3,7 +3,7 @@ import { delay } from '../helpers'
 
 export type SharksState = number
 
-export const sharks = {
+export const sharks: any = {
 	state: 0,
 	reducers: {
 		increment: (state: SharksState, payload: number): SharksState =>

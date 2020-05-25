@@ -1,4 +1,4 @@
- let isDone: boolean = false
+let isDone: boolean = false
 let decimal: number = 12
 let nameStr: string = 'tom'
 let list: number[] = [1]
@@ -147,6 +147,7 @@ class Person {
         this.name = theName
     }
 }
+
 class Employee extends Person {
     private department: string
     constructor(name: string, department: string) {
@@ -157,5 +158,6 @@ class Employee extends Person {
         return `Hello, my name is ${this.name} and I work in ${this.department}.`
     }
 }
+
 let howard = new Employee("Howard", "Sales")
 howard.getElevatorPitch()

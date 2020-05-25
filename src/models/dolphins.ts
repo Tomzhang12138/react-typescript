@@ -3,7 +3,7 @@ import { delay } from '../helpers'
 
 export type DolphinsState = number
 
-export const dolphins = {
+export const dolphins: any = {
 	state: 0,
 	reducers: {
 		increment: (state: DolphinsState) => state + 1,
