@@ -4,14 +4,15 @@
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "commonjs",
-        "target": "es5",
+        "target": "es6",
         "jsx": "react",
         "lib": ["es6", "DOM"],
         "baseUrl": ".",
         "paths": {
             "@/*": ["src/*"]
         },
-        "allowJs": true
+        "allowJs": true,
+        "experimentalDecorators": true
     },
     "include": [
         "./src/**/*"

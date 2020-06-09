@@ -23,8 +23,33 @@ type Props = connectedProps
 
 class Home extends React.Component<Props> {
     componentDidMount() {
-       enum color { Red, White, Blank }
-       console.log(color)
+        enum color { Red, White, Blank }
+        console.log(color)
+        // 类装饰器
+        const decoratorClass = (targetClass) => {
+           targetClass.test = '123'
+           const prototype = targetClass.prototype
+           prototype.log = () => {
+               console.log('log string')
+           }
+        }
+
+        // 类属性装饰器
+
+        const readonly = (target: any, name: any): any => {
+            target.name = '1212'
+        }
+
+        @decoratorClass
+        class Test {
+            static test: string
+            test: string
+            @readonly name: string = 'zyw'
+            log: () => any
+        }
+        console.log('3434', Test.test)
+        const test1 = new Test()
+        test1.log()
     }
     alertTest = () => {
         alert(1212)
