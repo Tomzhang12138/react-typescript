@@ -1,0 +1,43 @@
+.data-source {
+  width: 100%;
+  height: 500px;
+  overflow-y: auto;
+  &-title {
+    padding: 0 32px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid @border-color-base;
+  }
+  &-tabs {
+    padding: 20px 32px;
+  }
+  &-data-list {
+    display: inline-flex;
+    width: 100%;
+    padding: 20px 200px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+  &-data-item {
+    flex: 1;
+    max-width: 240px;
+    padding: 20px;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    border-radius: 10px;
+    border: 1px solid @border-color-base;
+    cursor: pointer;
+    &-right {
+      padding-left: 20px;
+    }
+    &-title {
+      font-weight: 500;
+      line-height: 34px;
+    }
+    &-developer {
+      color: @text-color-secondary;
+      font-size: 12px;
+    }
+  }
+}

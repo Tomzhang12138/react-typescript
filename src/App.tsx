@@ -37,7 +37,7 @@ const theme = createMuiTheme({
 export class App extends React.Component<AppProps, {}> {
     render() {
         return(
-            <div>
+            <div className='app-container'>
                 <React.Suspense fallback={<h1>loading...</h1>}>
                   <ThemeProvider theme={theme}>
                     <Switch>
